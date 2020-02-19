@@ -13,7 +13,7 @@ function countEvenNumbers(list)
 
 function main()
 {
-    let list = [0, 3, 4, 8, '11', 7, 9, '10', '120'];
+    let list = [0, 3, 4, 8, 11, 7, 9, 10, 120];
     let evenCount = countEvenNumbers(list);
     console.log(evenCount);
 }
