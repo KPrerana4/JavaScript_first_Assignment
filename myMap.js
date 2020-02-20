@@ -1,9 +1,9 @@
-function myMap(functionName, list)
+function myMap(callBacK, list)
 {
     let element, newList = [];
     for(element of list)
     {
-        newElement = functionName(element);
+        newElement = callBack(element);
         newList.push(newElement);
     }
     return newList;
