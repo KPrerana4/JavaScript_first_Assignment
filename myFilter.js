@@ -1,15 +1,15 @@
-function myFilter(functionName, list){
-    let element, newList = [];
-    for(element of list){
-        includeElement = functionName(element);
+function myFilter(callBack, list){
+    let index, newList = [];
+    for(index = 0; index < list.length; index++){
+        includeElement = callBack(list[index], index, list);
         if(includeElement == true){
-            newList.push(element);
+            newList.push(list[index]);
         }
     }
     return newList;
 }
 
-function numbersAbove30(element)
+function numbersAbove30(element, index, array)
 {
      return element > 30;
 }
