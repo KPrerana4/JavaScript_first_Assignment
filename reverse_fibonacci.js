@@ -9,7 +9,7 @@ function reverse()
     return reverseFibonacci;
 }
 
-function fibonacci()
+function fibonacci(fibonacciLength)
 {
     let nextIndex = 2;
     while(series.length != fibonacciLength)
@@ -25,8 +25,12 @@ function addNextElement(nextIndex)
     series.push(nextElement);
 }
 
+function main()
+{
+    var fibonacciLength = 10;
+    fibonacci(fibonacciLength);
+    console.log("Fibonacci sequence in reverse order : " + series.reverse());
+}
+
 var series = [0,1];
-var fibonacciLength = 10;
-fibonacci(fibonacciLength);
-var reverseFibonacci = reverse()
-console.log(reverseFibonacci);
+main();
