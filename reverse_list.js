@@ -1,3 +1,6 @@
+//var list = [1, 'a', "abcd", "b", 3.6, 'wxyz'];
+//reverseList();
+
 function reverseList()
 {
     let listLength = list.length;
@@ -9,6 +12,10 @@ function reverseList()
     }
 }
 
-var list = [1, 'a', "abcd", "b", 3.6, 'wxyz'];
-reverseList();
-console.log(list);
+function main()
+{
+    let list = [1, 'a', "abcd", "b", 3.6, 'wxyz'];
+    console.log("List in the revrse order : " + list.reverse());
+}
+
+main();
