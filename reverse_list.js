@@ -15,7 +15,7 @@ function reverseList()
 function main()
 {
     let list = [1, 'a', "abcd", "b", 3.6, 'wxyz'];
-    console.log("List in the revrse order : " + list.reverse());
+    console.log("Reverse order of the list: " + list.reverse());
 }
 
 main();
