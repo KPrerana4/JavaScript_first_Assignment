@@ -17,4 +17,13 @@ function main()
     console.log(count);
 }
 
+function main()
+{
+    let list = [3, 4, 5, 6, 1, 8, 2, 9];
+    let threshold = 5;
+    let numbersBelowThreshold = list.filter(element => element > threshold);
+    let length = numbersBelowThreshold.length;
+    console.log("numbers Count (below threshold) : " + length);
+}
+
 main();
