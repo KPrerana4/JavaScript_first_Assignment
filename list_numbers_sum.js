@@ -8,6 +8,14 @@ function sumOfList(list)
     return sum;
 }
 
+function sumOfList(list)
+{
+    let sum = list.reduce(function(accumulator, currentValue){
+        return accumulator + currentValue;
+    });
+    return sum;
+}
+
 function main()
 {
     let list = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
