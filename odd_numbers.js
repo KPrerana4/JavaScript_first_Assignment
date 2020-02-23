@@ -1,18 +1,19 @@
-var numbersList = [1, -3, 5, 2, 4, 6, 7, -8, 99, 100];
-var number;
-var oddNumbers = [];
-for(number of numbersList)
+function getOddNumbers(list)
 {
-    if(number % 2 != 0)
-    {
-        oddNumbers.push(number);
+    let oddNumbers = [];
+    for(let element of list){
+        if(element % 2 != 0){
+            oddNumbers.push(element);
+        }
     }
+    return oddNumbers;
 }
 
 function main()
 {
-    let list = [1, -3, 5, 2, 4, 6, 7, -8, 99, 100];
-    let oddNumbers = list.filter(element => element % 2 != 0);
+    let list = [1, 0, -3, "11", 56, 101, 98, "12"];
+    let oddNumbers = getOddNumbers(list);
     console.log("Odd numbers in the list : " + oddNumbers);
 }
+
 main();
