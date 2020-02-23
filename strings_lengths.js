@@ -8,6 +8,13 @@ function getStringLengths(list)
     return stringLengths;
 }
 
+function getStringLengths(list)
+{
+    return list.map(function(element){
+        return element.length;
+    });
+}
+
 function main()
 {
     let list = ["abcd", 'a', "uvwxyz", "1234", '1234.689'];
