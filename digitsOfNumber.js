@@ -21,11 +21,16 @@ function reverseList(digits)
     return digits;
 }
 
+function reverseList(digits)
+{
+    return digits.reverse();
+}
+
 function main()
 {
     let number = 14250;
     let digits = getDigits(number);
-    console.log(reverseList(digits));
+    console.log("Digits of a number : " + reverseList(digits));
 }
 
 main();
