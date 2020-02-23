@@ -9,6 +9,14 @@ function maximumOfList(list)
     return maximum;
 }
 
+function maximumOfList(list)
+{
+    let maximum = list.reduce(function(accumulator, currentValue){
+        return Math.max(accumulator, currentValue);
+    });
+    return maximum;
+}
+
 function main()
 {
     let list = [1, 10, 8, 180, 25, 100, 88, 120, 160];
