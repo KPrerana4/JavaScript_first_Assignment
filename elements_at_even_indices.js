@@ -1,21 +1,18 @@
-//var array = new Array(1, "a", 3.8, 'abcd', "ef");
-
-var getList = function(){
-    let list = [];
-    let index, k = 0;
-    let arrayLength = array.length;
-    for(index = 0; index < arrayLength; index+=2)
-    {
-        list[k++] = array[index];
+function findEvenIndexElements(list)
+{
+    let evenIndexElements = [];
+    for(let index = 0 ; index < list.length ; index++){
+        if(index % 2 == 0){
+            evenIndexElements.push(list[index]);
+        }
     }
-    return list;
+    return evenIndexElements;
 }
 
 function main()
 {
     let list = [1, "a", 3.8, 'abcd', "ef"];
-    let newList = list.filter((element, index) => index % 2 == 0);
-    console.log("Numbers at even indices : " + newList);
+    console.log("Elements at even indices are : " + findEvenIndexElements(list));
 }
 
 main();
