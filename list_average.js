@@ -8,6 +8,14 @@ function sumOfList(list)
     return sum;
 }
 
+function sumOfList(list)
+{
+    let sum = list.reduce(function(accumulator, currentValue){
+        return accumulator + currentValue;
+    });
+    return sum;
+}
+
 function averageOfList(list)
 {
     let sum = sumOfList(list);
