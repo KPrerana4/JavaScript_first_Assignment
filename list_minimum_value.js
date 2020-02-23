@@ -9,6 +9,14 @@ function minimumOfList(list)
     return minimum;
 }
 
+function minimumOfList(list)
+{
+    let minimum = list.reduce(function(accumulator, currentValue){
+        return Math.min(accumulator, currentValue);
+    });
+    return minimum;
+}
+
 function main()
 {
     let list = [1, 10, 8, 180, 25, 100, 88, -2, 160];
