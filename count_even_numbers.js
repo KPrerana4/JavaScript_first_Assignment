@@ -11,18 +11,17 @@ function countEvenNumbers(list)
     return evenCount;
 }
 
+function countEvenNumbers(list)
+{
+    let evenNumbers = list.filter(element => element % 2 == 0);
+    return evenNumbers.length;
+}
+
 function main()
 {
     let list = [0, 3, 4, 8, 11, 7, 9, 10, 120];
     let evenCount = countEvenNumbers(list);
     console.log(evenCount);
-}
-
-function main()
-{
-    let list = [0, 3, 4, 8, 11, 7, 9, 10, 120, 199, 220];
-    let evenNumbers = list.filter(element => element % 2 == 0);
-    console.log("Number of even numbers in list : " + evenNumbers.length);
 }
 
 main();
