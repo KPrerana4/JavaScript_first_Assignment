@@ -45,4 +45,10 @@ function main()
     console.log("Fibonacci series in reverse order:" + reverseFibonacciSeries);
 }
 
+function main()
+{
+    let series = findFibonacciSeries(10);
+    console.log("Fibonacci Series in reverse order : " + series.reverse());
+}
+
 main();
