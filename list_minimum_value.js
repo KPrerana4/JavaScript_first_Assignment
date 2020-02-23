@@ -1,27 +1,19 @@
-function getMinimumValue()
+function minimumOfList(list)
 {
-    minimum = list[0];
-    for(let element of list)
-    {
-        if(element < minimum)
-        {
+    let element, minimum = list[0];
+    for(element of list){
+        if(minimum > element){
             minimum = element;
         }
     }
+    return minimum;
 }
-
-var list = new Array(2, 10, 8, 30, 1, 100, 88);
-var minimum;
-getMinimumValue();
-//console.log(minimum);
 
 function main()
 {
-    let list = [2, 10, 8, 30, 1, 100, 88];
-    let minimum = list.reduce(function(accumulator, currentValue){
-            return Math.min(accumulator,currentValue);
-     });
-     console.log("Minimum value of the list : " + minimum);
+    let list = [1, 10, 8, 180, 25, 100, 88, -2, 160];
+    let minimum = minimumOfList(list);
+    console.log("Minimum value : " + minimum);
 }
 
 main();
