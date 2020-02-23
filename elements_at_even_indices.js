@@ -9,6 +9,17 @@ function findEvenIndexElements(list)
     return evenIndexElements;
 }
 
+function findEvenIndexElements(list)
+{
+    let evenIndexElements = list.filter(checkIndexEvenOrNot);
+    return evenIndexElements;
+}
+
+function checkIndexEvenOrNot(element, index)
+{
+    return index % 2 == 0;
+}
+
 function main()
 {
     let list = [1, "a", 3.8, 'abcd', "ef"];
