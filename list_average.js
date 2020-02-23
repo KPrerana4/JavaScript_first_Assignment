@@ -1,25 +1,24 @@
-function average()
+function sumOfList(list)
 {
-    let number, listLength = list.length, sum = 0;
-    for(number of list)
+    let sum = 0;
+    for(let element of list)
     {
-        sum += number;
+        sum += element;
     }
-    let average = sum/listLength;
+    return sum;
+}
+
+function averageOfList(list)
+{
+    let sum = sumOfList(list);
+    let average = sum / list.length;
     return average;
 }
 
-//var list = [2, 6, 8.4, 10, 88, 44];
-//console.log(average());
-
 function main()
 {
-    let list = [2, 6, 8.4, 10, 88, 44];
-    let sumOfList = list.reduce(function(accumulator, currentValue){
-        return accumulator + currentValue;
-    });
-    let average = sumOfList/list.length;
-    console.log(average);
+    let list = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
+    console.log("Average of numbers : " + averageOfList(list));
 }
 
 main();
