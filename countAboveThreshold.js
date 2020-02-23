@@ -9,23 +9,20 @@ function aboveThresholdCount(list, threshold)
     return count;
 }
 
-function main()
+function aboveThresholdCount(list, threshold)
 {
-    let list = [3, 4, 5, 6, 1, 8, 2];
-    let threshold = 4;
-    let count = aboveThresholdCount(list, threshold);
-    console.log(count);
+    let numbersAboveThreshold = list.filter(function(element){
+           return element > threshold;
+    });
+    return numbersAboveThreshold.length;
 }
 
 function main()
 {
     let list = [3, 4, 5, 6, 1, 8, 2];
-    var threshold = 2;
-    let numbersAboveThreshold = list.filter(function(element){
-            return element > threshold;
-        });
-    let length = numbersAboveThreshold.length;
-    console.log("Count of numbers above threshold : " + length);
+    let threshold = 2;
+    let count = aboveThresholdCount(list, threshold);
+    console.log("Count of numbers above threshold are : " + count);
 }
 
 main();
