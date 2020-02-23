@@ -1,21 +1,17 @@
-list = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
-var number;
-var sumOfArray = 0;
-for(number of list)
+function sumOfList(list)
 {
-    sumOfArray += number;
+    let sum = 0;
+    for(let element of list)
+    {
+        sum += element;
+    }
+    return sum;
 }
 
 function main()
 {
     let list = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
-    let sumOfList = list.reduce(sum);
-    console.log("Sum of numbers in list : " + sumOfList);
-}
-
-function sum(accumulator, currentValue)
-{
-    return accumulator + currentValue;
+    console.log("Sum of numbers : " + sumOfList(list));
 }
 
 main();
