@@ -1,36 +1,48 @@
-function reverse()
+function findFibonacciSeries(fibonacciLength)
 {
-    let index;
-    let reverseFibonacci = [];
-    for(index = fibonacciLength - 1; index >= 0; index--)
-    {
-        reverseFibonacci.push(series[index]);
+    if(fibonacciLength < 3){
+        return getSeriesOfSizeLessThan3(fibonacciLength);
     }
-    return reverseFibonacci;
-}
-
-function fibonacci(fibonacciLength)
-{
-    let nextIndex = 2;
-    while(series.length != fibonacciLength)
-    {
-        addNextElement(nextIndex);
-        nextIndex++;
+    else{
+        return findSeries(fibonacciLength);
     }
 }
 
-function addNextElement(nextIndex)
+function getSeriesOfSizeLessThan3(fibonacciLength)
 {
-    let nextElement = series[nextIndex - 1] + series[nextIndex - 2];
-    series.push(nextElement);
+    if(fibonacciLength == 1)
+        return [0];
+    else if(fibonacciLength == 2)
+        return [0,1];
+    return [];
+}
+
+function findSeries(fibonacciLength)
+{
+    let series = [0,1], nextIndex = 2;
+    while(fibonacciLength != nextIndex){
+          let nextElement = series[nextIndex - 1] + series[nextIndex - 2];
+          series.push(nextElement);
+          nextIndex++;
+    }
+    return series;
+}
+
+function reverseTheList(list)
+{
+     let listLength = list.length, temporaryContainer;
+     for(let index = 0 ; index < listLength/2 ; index++){
+            temporaryContainer = list[index];
+            list[index] = list[listLength - index - 1];
+            list[listLength - index - 1] = temporaryContainer;
+     }
+     return list;
 }
 
 function main()
 {
-    var fibonacciLength = 10;
-    fibonacci(fibonacciLength);
-    console.log("Fibonacci sequence in reverse order : " + series.reverse());
+    let reverseFibonacciSeries = reverseTheList(findFibonacciSeries(8));
+    console.log("Fibonacci series in reverse order:" + reverseFibonacciSeries);
 }
 
-var series = [0,1];
 main();
