@@ -9,19 +9,18 @@ function reverseArray(array)
     return reversedArray;
 }
 
-function main()
+function reverseArray(array)
 {
-    let array = [1, "abcd", "1234", 12.4];
-    console.log(reverseArray(array));
+   let reversedArray = array.map(function(element, index, array){
+           return  array[array.length - index -1];
+   });
+   return reversedArray;
 }
 
 function main()
 {
     let array = [1, "abcd", "1234", 12.4];
-    let reversedArray = array.map(function(element, index, array){
-        return  array[array.length - index -1];
-    });
-    console.log("Reverse order of array : " + reversedArray);
+    console.log("Reverse order of array : " + reverseArray(array));
 }
 
 main();
