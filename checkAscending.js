@@ -9,11 +9,21 @@ function checkAscendingOrder(list)
    return order;
 }
 
+function checkAscendingOrder(list)
+{
+    let newList = list.filter(function(element, index, list){
+       return list[index] < list[index + 1];
+    });
+    return newList.length + 1 == list.length;
+}
+
 function main()
 {
-    let list = [2,4,1,6,5];
+    let list = [2, 4, 1, 6, 5];
     console.log(list+" is in ascending order:"+checkAscendingOrder(list));
-    list = [10,20,30,40];
+    list = [10, 20, 30, 40];
+    console.log(list+" is in ascending order:"+checkAscendingOrder(list));
+    list = [10, 20, 30, 26, 36];
     console.log(list+" is in ascending order:"+checkAscendingOrder(list));
 }
 
