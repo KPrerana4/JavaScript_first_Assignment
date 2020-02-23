@@ -1,18 +1,19 @@
-var numbersList = [1, 3, 5, 2, 4, 6, 7, 8, 99, 100];
-var number;
-var evenNumbers = [];
-for(number of numbersList)
+function findEvenNumbers(list)
 {
-    if(number % 2 == 0)
-    {
-        evenNumbers.push(number);
+    let evenNumbers = [];
+    for(let element of list){
+        if(element % 2 == 0){
+            evenNumbers.push(element);
+        }
     }
+    return evenNumbers;
 }
 
 function main()
 {
-    let list = [1, 3, 5, 2, 4, 6, 7, 8, 99, 100];
-    let evenNumbers = list.filter(element => element % 2 == 0);
-    console.log("Even numbers in the list : " + evenNumbers);
+    let list = [1, 0, -3, "11", 56, 101, 98, "12"];
+    let evenNumbers = findEvenNumbers(list);
+    console.log("Odd numbers in the list : " + evenNumbers);
 }
+
 main();
