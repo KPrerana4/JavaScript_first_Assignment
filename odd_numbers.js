@@ -1,4 +1,4 @@
-function getOddNumbers(list)
+function findOddNumbers(list)
 {
     let oddNumbers = [];
     for(let element of list){
@@ -12,7 +12,7 @@ function getOddNumbers(list)
 function main()
 {
     let list = [1, 0, -3, "11", 56, 101, 98, "12"];
-    let oddNumbers = getOddNumbers(list);
+    let oddNumbers = findOddNumbers(list);
     console.log("Odd numbers in the list : " + oddNumbers);
 }
 
