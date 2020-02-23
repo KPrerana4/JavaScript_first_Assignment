@@ -9,21 +9,18 @@ function belowThresholdCount(list, threshold)
     return count;
 }
 
-function main()
+function belowThresholdCount(list, threshold)
 {
-    let list = [3, 4, 5, 6, 1, 8, 2];
-    let threshold = 4;
-    let count = belowThresholdCount(list, threshold);
-    console.log(count);
+    let numbersBelowThreshold = list.filter(element => element < threshold);
+    return numbersBelowThreshold.length;
 }
 
 function main()
 {
-    let list = [3, 4, 5, 6, 1, 8, 2, 9];
-    let threshold = 5;
-    let numbersBelowThreshold = list.filter(element => element > threshold);
-    let length = numbersBelowThreshold.length;
-    console.log("numbers Count (below threshold) : " + length);
+    let list = [3, 4, 5, 6, 1, 8, 2, '0', 0];
+    let threshold = 4;
+    let count = belowThresholdCount(list, threshold);
+    console.log("Count of numbers below threshold : "+count);
 }
 
 main();
