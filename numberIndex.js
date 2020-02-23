@@ -1,4 +1,4 @@
-function findIndex(list, number)
+function findIndexOfNumber(list, number)
 {
     for(let index = 0;index < list.length; index++)
     {
@@ -8,11 +8,18 @@ function findIndex(list, number)
     return -1;
 }
 
+function findIndexOfNumber(list, number)
+{
+    return list.findIndex(function(element){
+        return element == number;
+    });
+}
+
 function main()
 {
-    let list = [1,2,3,4,100,99,98,97];
+    let list = [1, 2, 3, 4, 100, 99, 98, 97, 4, 98];
     let number = 4;
-    let index = findIndex(list, number);
+    let index = findIndexOfNumber(list, number);
     if(index == -1)
        console.log("Not found");
      else
