@@ -1,16 +1,16 @@
-function sumOfList(list)
+function findSumOfList(numbers)
 {
     let sum = 0;
-    for(let element of list)
+    for(let element of numbers)
     {
         sum += element;
     }
     return sum;
 }
 
-function sumOfList(list)
+function calculateSumOfList(numbers)
 {
-    let sum = list.reduce(function(accumulator, currentValue){
+    let sum = numbers.reduce(function(accumulator, currentValue){
         return accumulator + currentValue;
     });
     return sum;
@@ -18,8 +18,8 @@ function sumOfList(list)
 
 function main()
 {
-    let list = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
-    console.log("Sum of numbers : " + sumOfList(list));
+    let numbers = [1, 10.2, 20, 30.4, 2, 3, 9, 44];
+    console.log("Sum of numbers : " + calculateSumOfList(numbers));
 }
 
 main();
