@@ -8,7 +8,7 @@ function sumOfList(list)
     return sum;
 }
 
-function sumOfList(list)
+function calculateSumOfList(list)
 {
     let sum = list.reduce(function(accumulator, currentValue){
         return accumulator + currentValue;
@@ -18,9 +18,7 @@ function sumOfList(list)
 
 function averageOfList(list)
 {
-    let sum = sumOfList(list);
-    let average = sum / list.length;
-    return average;
+    return calculateSumOfList(list) / list.length;
 }
 
 function main()
