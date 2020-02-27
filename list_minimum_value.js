@@ -9,7 +9,7 @@ function minimumOfList(list)
     return minimum;
 }
 
-function minimumOfList(list)
+function lowestNumberOfList(list)
 {
     let minimum = list.reduce(function(accumulator, currentValue){
         return Math.min(accumulator, currentValue);
@@ -19,9 +19,8 @@ function minimumOfList(list)
 
 function main()
 {
-    let list = [1, 10, 8, 180, 25, 100, 88, -2, 160];
-    let minimum = minimumOfList(list);
-    console.log("Minimum value : " + minimum);
+    let list = [12, 10, 8, 180, 25, 100, 88, 2, 160];
+    console.log("Minimum value : " + lowestNumberOfList(list));
 }
 
 main();
