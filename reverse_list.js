@@ -9,10 +9,16 @@ function reverseTheList(list)
     return list;
 }
 
+function listReverse(list)
+{
+    list.reverse()
+}
+
 function main()
 {
     let list = [1, 'a', "abcd", "b", 3.6, 'wxyz', 98, 120.86];
-    console.log("List in reverse order : " + list.reverse());
+    listReverse(list)
+    console.log("List in reverse order : " + list);
 }
 
 main();
