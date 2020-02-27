@@ -11,7 +11,7 @@ function countOddNumbers(list)
     return oddCount;
 }
 
-function countOddNumbers(list)
+function getOddNumbersCount(list)
 {
     let oddNumbers = list.filter(element => element % 2 != 0 );
     return oddNumbers.length;
@@ -20,8 +20,7 @@ function countOddNumbers(list)
 function main()
 {
     let list = [0, 3, 4, 8, '11', 7, 9, 10, '91', 99];
-    let oddCount = countOddNumbers(list);
-    console.log(oddCount);
+    console.log("odd numbers count : " + getOddNumbersCount(list));
 }
 
 main();
