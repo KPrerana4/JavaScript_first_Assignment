@@ -39,16 +39,16 @@ function reverseTheList(list)
      return list;
 }
 
-function main()
+function reverseTheSeries(series)
 {
-    let reverseFibonacciSeries = reverseTheList(findFibonacciSeries(8));
-    console.log("Fibonacci series in reverse order:" + reverseFibonacciSeries);
+    series.reverse();
 }
 
 function main()
 {
-    let series = findFibonacciSeries(10);
-    console.log("Fibonacci Series in reverse order : " + series.reverse());
+    let series = findFibonacciSeries(8);
+    reverseTheSeries(series)
+    console.log("Fibonacci Series in reverse order : " + series);
 }
 
 main();
