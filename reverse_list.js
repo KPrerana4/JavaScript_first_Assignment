@@ -1,23 +1,18 @@
 function reverseTheList(list)
 {
-    let listLength = list.length, temporaryContainer;
+    let listLength = list.length, temporary;
     for(let index = 0 ; index < listLength/2 ; index++){
-        temporaryContainer = list[index];
+        temporary = list[index];
         list[index] = list[listLength - index - 1];
-        list[listLength - index - 1] = temporaryContainer;
+        list[listLength - index - 1] = temporary;
     }
     return list;
-}
-
-function reverseTheList(list)
-{
-    return list.reverse();
 }
 
 function main()
 {
     let list = [1, 'a', "abcd", "b", 3.6, 'wxyz', 98, 120.86];
-    console.log("List in reverse order : " + reverseTheList(list));
+    console.log("List in reverse order : " + list.reverse());
 }
 
 main();
