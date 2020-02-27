@@ -20,8 +20,7 @@ function greatestOfList(list)
 function main()
 {
     let list = [1, 10, 8, 180, 25, 100, 88, 120, 160];
-    let maximum = greatestOfList(list);
-    console.log("Maximum value : " + maximum);
+    console.log("Maximum value : " +  greatestOfList(list));
 }
 
 main();
