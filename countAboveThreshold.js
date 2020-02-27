@@ -1,4 +1,4 @@
-function aboveThresholdCount(list, threshold)
+function getAboveThresholdCount(list, threshold)
 {
     let count = 0;
     for(let number of list)
@@ -9,7 +9,7 @@ function aboveThresholdCount(list, threshold)
     return count;
 }
 
-function aboveThresholdCount(list, threshold)
+function findAboveThresholdCount(list, threshold)
 {
     let numbersAboveThreshold = list.filter(function(element){
            return element > threshold;
@@ -19,9 +19,8 @@ function aboveThresholdCount(list, threshold)
 
 function main()
 {
-    let list = [3, 4, 5, 6, 1, 8, 2];
-    let threshold = 2;
-    let count = aboveThresholdCount(list, threshold);
+    let list = [3, 4, 5, 6, 1, 8, 2], threshold = 2;
+    let count = findAboveThresholdCount(list, threshold);
     console.log("Count of numbers above threshold are : " + count);
 }
 
