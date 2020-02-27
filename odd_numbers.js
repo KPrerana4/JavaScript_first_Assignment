@@ -14,18 +14,17 @@ function checkOdd(element)
     return element % 2 != 0;
 }
 
-function findOddNumbers(list)
+function getOddNumbers(list)
 {
     let oddNumbers = [];
     oddNumbers = list.filter(checkOdd);
     return oddNumbers;
 }
 
-
 function main()
 {
     let list = [1, 0, -3, "11", 56, 101, 98, "12"];
-    let oddNumbers = findOddNumbers(list);
+    let oddNumbers = getOddNumbers(list);
     console.log("Odd numbers in the list : " + oddNumbers);
 }
 
