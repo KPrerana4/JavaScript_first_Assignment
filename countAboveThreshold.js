@@ -19,9 +19,7 @@ function findAboveThresholdCount(list, threshold)
 
 function main()
 {
-    let list = [3, 4, 5, 6, 1, 8, 2], threshold = 2;
-    let count = findAboveThresholdCount(list, threshold);
-    console.log("Count of numbers above threshold are : " + count);
+    console.log(findAboveThresholdCount([3, 4, 5, 6, 1, 8, 2], 2));
 }
 
 main();
