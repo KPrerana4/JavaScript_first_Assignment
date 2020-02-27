@@ -11,7 +11,7 @@ function countEvenNumbers(list)
     return evenCount;
 }
 
-function countEvenNumbers(list)
+function getEvenNumbersCount(list)
 {
     let evenNumbers = list.filter(element => element % 2 == 0);
     return evenNumbers.length;
@@ -20,8 +20,7 @@ function countEvenNumbers(list)
 function main()
 {
     let list = [0, 3, 4, 8, 11, 7, 9, 10, 120];
-    let evenCount = countEvenNumbers(list);
-    console.log(evenCount);
+    console.log("Even numbers count : " + getEvenNumbersCount(list));
 }
 
 main();
