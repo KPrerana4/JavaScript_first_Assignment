@@ -8,22 +8,20 @@ function findIndexOfNumber(list, number)
     return -1;
 }
 
-function findIndexOfNumber(list, number)
+function getIndexOfNumber(list, number)
 {
-    return list.findIndex(function(element){
-        return element == number;
-    });
+    return list.indexOf(number);
 }
 
 function main()
 {
-    let list = [1, 2, 3, 4, 100, 99, 98, 97, 4, 98];
-    let number = 4;
-    let index = findIndexOfNumber(list, number);
-    if(index == -1)
+    let index = getIndexOfNumber([1, 2, 3, 4, 100, 99, 98, 97, 4, 98], 100);
+    if(index == -1){
        console.log("Not found");
-     else
+    }
+    else{
        console.log("number found at "+index);
+    }
 }
 
 main();
