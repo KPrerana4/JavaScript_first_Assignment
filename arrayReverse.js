@@ -9,7 +9,7 @@ function reverseArray(array)
     return reversedArray;
 }
 
-function reverseArray(array)
+function getReversedArray(array)
 {
    let reversedArray = array.map(function(element, index, array){
            return  array[array.length - index -1];
@@ -19,8 +19,7 @@ function reverseArray(array)
 
 function main()
 {
-    let array = [1, "abcd", "1234", 12.4];
-    console.log("Reverse order of array : " + reverseArray(array));
+    console.log("Reverse order:" +getReversedArray([1, "abcd", "1234", 12.4]));
 }
 
 main();
