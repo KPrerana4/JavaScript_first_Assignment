@@ -1,4 +1,4 @@
-function belowThresholdCount(list, threshold)
+function getBelowThresholdCount(list, threshold)
 {
     let count = 0;
     for(let number of list)
@@ -9,7 +9,7 @@ function belowThresholdCount(list, threshold)
     return count;
 }
 
-function belowThresholdCount(list, threshold)
+function findBelowThresholdCount(list, threshold)
 {
     let numbersBelowThreshold = list.filter(element => element < threshold);
     return numbersBelowThreshold.length;
@@ -17,10 +17,7 @@ function belowThresholdCount(list, threshold)
 
 function main()
 {
-    let list = [3, 4, 5, 6, 1, 8, 2, '0', 0];
-    let threshold = 4;
-    let count = belowThresholdCount(list, threshold);
-    console.log("Count of numbers below threshold : "+count);
+    console.log(findBelowThresholdCount([3, 4, 5, 6, 1, 8, 2, 0, 3], 4));
 }
 
 main();
