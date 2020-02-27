@@ -1,10 +1,8 @@
 function findEvenIndexElements(list)
 {
     let evenIndexElements = [];
-    for(let index = 0 ; index < list.length ; index++){
-        if(index % 2 == 0){
-            evenIndexElements.push(list[index]);
-        }
+    for(let index = 0 ; index < list.length ; index+=2){
+         evenIndexElements.push(list[index]);
     }
     return evenIndexElements;
 }
