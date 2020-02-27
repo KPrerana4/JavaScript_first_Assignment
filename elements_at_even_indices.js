@@ -9,13 +9,13 @@ function findEvenIndexElements(list)
     return evenIndexElements;
 }
 
-function findEvenIndexElements(list)
+function getEvenIndexElements(list)
 {
-    let evenIndexElements = list.filter(checkIndexEvenOrNot);
+    let evenIndexElements = list.filter(isEven);
     return evenIndexElements;
 }
 
-function checkIndexEvenOrNot(element, index)
+function isEven(element, index)
 {
     return index % 2 == 0;
 }
@@ -23,7 +23,7 @@ function checkIndexEvenOrNot(element, index)
 function main()
 {
     let list = [1, "a", 3.8, 'abcd', "ef"];
-    console.log("Elements at even indices are : " + findEvenIndexElements(list));
+    console.log("Elements at even indices are : " + getEvenIndexElements(list));
 }
 
 main();
