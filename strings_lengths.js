@@ -1,24 +1,24 @@
-function getStringLengths(list)
+function getStringsLengths(strings)
 {
-    let string, stringLengths = []
+    let string, stringsLengths = []
     for(string of list)
     {
       stringLengths.push(string.length);
     }
-    return stringLengths;
+    return stringsLengths;
 }
 
-function getStringLengths(list)
+function findStringsLengths(strings)
 {
-    return list.map(function(element){
+    return strings.map(function(element){
         return element.length;
     });
 }
 
 function main()
 {
-    let list = ["abcd", 'a', "uvwxyz", "1234", '1234.689'];
-    console.log("Lengths of strings : " + getStringLengths(list));
+    let strings = ["abcd", 'a', "uvwxyz", "1234", '1234.689'];
+    console.log("Lengths of strings : " + findStringsLengths(strings));
 }
 
 main();
