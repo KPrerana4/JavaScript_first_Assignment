@@ -16,9 +16,7 @@ function checkOdd(element)
 
 function getOddNumbers(list)
 {
-    let oddNumbers = [];
-    oddNumbers = list.filter(checkOdd);
-    return oddNumbers;
+    return list.filter(checkOdd);
 }
 
 function main()
