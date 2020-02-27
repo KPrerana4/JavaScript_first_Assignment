@@ -9,7 +9,7 @@ function maximumOfList(list)
     return maximum;
 }
 
-function maximumOfList(list)
+function greatestOfList(list)
 {
     let maximum = list.reduce(function(accumulator, currentValue){
         return Math.max(accumulator, currentValue);
@@ -20,7 +20,7 @@ function maximumOfList(list)
 function main()
 {
     let list = [1, 10, 8, 180, 25, 100, 88, 120, 160];
-    let maximum = maximumOfList(list);
+    let maximum = greatestOfList(list);
     console.log("Maximum value : " + maximum);
 }
 
