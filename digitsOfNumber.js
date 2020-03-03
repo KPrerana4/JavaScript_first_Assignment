@@ -4,33 +4,16 @@ function getDigits(number)
     while(number > 0)
     {
         let lastDigit = number % 10;
-        digits.push(lastDigit);
+        digits.unshift(lastDigit);
         number = Math.floor(number / 10);
     }
     return digits;
 }
 
-function reverseList(digits)
-{
-    for(let index = 0;index < digits.length/2;index++)
-    {
-        let temporary = digits[index];
-        digits[index] = digits[digits.length - index -1];
-        digits[digits.length - index -1] = temporary;
-    }
-    return digits;
-}
-
-function reverseList(digits)
-{
-    return digits.reverse();
-}
-
 function main()
 {
     let number = 14250;
-    let digits = getDigits(number);
-    console.log("Digits of a number : " + reverseList(digits));
+    console.log("Digits of a number : " + getDigits(number));
 }
 
 main();
